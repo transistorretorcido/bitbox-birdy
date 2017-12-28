@@ -332,10 +332,7 @@ void game_init() {
     {
         tube_u[idx].state = STATE_DISABLED;
         tube_d[idx].state = STATE_DISABLED;        
-    }   
-    
-    //fill_Pipes();
-    
+    }      
 }
 
 void game_frame()
@@ -393,23 +390,8 @@ void game_frame()
     
     move_Pipes(); 
     
-    check_BirdyCollide();    
-    
-   /* for(int t_idx = 0; t_idx < MAX_PIPES; t_idx++){
-        if(tube_u[t_idx].state != STATE_DISABLED){
-            switch(tube_u[t_idx].actualFrame){
-                case 0:
-                    tube_u[t_idx].sprite = tube_up_short_sprite;                         
-                break;                
-                case 1:
-                    tube_u[t_idx].sprite = tube_up_med_sprite;                         
-                break;
-                case 2:
-                    tube_u[t_idx].sprite = tube_up_long_sprite; 
-                break;                
-            }
-        }
-    }*/
+    check_BirdyCollide();       
+   
     
     if(frCnt_NewPipe < 100  ) frCnt_NewPipe++;
     else
