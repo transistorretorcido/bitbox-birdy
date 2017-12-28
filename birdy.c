@@ -357,11 +357,11 @@ void game_frame()
         if(game_State == GAME_STOP || game_State == GAME_PAUSED)
         {
             game_State = GAME_RUN;   
-            g_score = 0;  
+            //g_score = 0;  
             show_GO = 0;   
             delayToRestart = 200;
         }
-        //else if(game_State == GAME_RUN) game_State = GAME_PAUSED;
+        else if(game_State == GAME_RUN) game_State = GAME_PAUSED;
     
     }    
     
